@@ -3,55 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manpreet Kour | CV</title>
+  <title>Manpreet Kour | Ph.D. Candidate | AI for Accessibility</title>
+  <meta name="description" content="Manpreet Kour - Ph.D. Candidate in Informatics, AI for Accessibility, Deep Learning Researcher" />
 
   <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --primary: #163a5c;
+      --primary-2: #1f4e79;
+      --accent: #2d6a9f;
+      --soft: #eef4fa;
+      --text: #1f2937;
+      --muted: #5b6777;
+      --line: #dbe5ef;
+      --shadow: 0 18px 45px rgba(17, 37, 63, 0.12);
+      --radius: 22px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f7fb;
-      color: #222;
+      background:
+        radial-gradient(circle at top left, rgba(45, 106, 159, 0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(31, 78, 121, 0.08), transparent 22%),
+        var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 30px auto;
-      background: #ffffff;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      border-radius: 18px;
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrapper {
+      width: min(1180px, calc(100% - 28px));
+      margin: 26px auto 42px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #163a5c 0%, #1f4e79 48%, #2d6a9f 100%);
+      color: #fff;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
       overflow: hidden;
+      position: relative;
     }
 
-    /* HEADER */
-    .header {
-      background: linear-gradient(135deg, #1f4e79, #2d6a9f);
-      color: white;
-      padding: 40px 35px;
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      pointer-events: none;
     }
 
-    .header-content {
-      display: flex;
-      flex-wrap: wrap;
+    .hero::before {
+      width: 260px;
+      height: 260px;
+      top: -90px;
+      right: -70px;
+    }
+
+    .hero::after {
+      width: 180px;
+      height: 180px;
+      bottom: -60px;
+      left: -40px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 34px;
       align-items: center;
-      gap: 30px;
+      padding: 40px 42px;
+      position: relative;
+      z-index: 1;
     }
 
     .photo-box {
-      width: 170px;
-      height: 170px;
+      width: 190px;
+      height: 190px;
       border-radius: 50%;
       overflow: hidden;
-      border: 5px solid rgba(255,255,255,0.9);
+      border: 6px solid rgba(255, 255, 255, 0.92);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      background: rgba(255,255,255,0.14);
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
     }
 
     .photo-box img {
@@ -61,85 +117,135 @@
       display: block;
     }
 
-    .header-text {
-      flex: 1;
-      min-width: 250px;
+    .photo-fallback {
+      font-size: 14px;
+      text-align: center;
+      padding: 18px;
+      color: #f6fbff;
     }
 
-    .header h1 {
-      font-size: 2.4rem;
+    .hero-text h1 {
+      font-size: 2.9rem;
+      line-height: 1.05;
       margin-bottom: 10px;
+      letter-spacing: 0.2px;
     }
 
-    .header h2 {
-      font-size: 1.1rem;
+    .hero-text h2 {
+      font-size: 1.15rem;
       font-weight: 400;
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 20px;
-      font-size: 0.95rem;
-    }
-
-    .contact a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    /* LAYOUT */
-    .main {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-    }
-
-    .left-column {
-      background: #eef4fa;
-      padding: 30px;
-      border-right: 1px solid #dce7f2;
-    }
-
-    .right-column {
-      padding: 30px;
-    }
-
-    .section {
-      margin-bottom: 28px;
-    }
-
-    .section h3 {
-      font-size: 1.1rem;
-      color: #1f4e79;
-      margin-bottom: 12px;
-      border-bottom: 2px solid #d7e5f2;
-      padding-bottom: 6px;
-      text-transform: uppercase;
-    }
-
-    .item {
+      opacity: 0.97;
       margin-bottom: 18px;
     }
 
-    .item h4 {
-      color: #163a5c;
-      margin-bottom: 4px;
+    .hero-text p {
+      max-width: 840px;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.94);
+      margin-bottom: 18px;
     }
 
-    .meta {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 6px;
-      font-style: italic;
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
     }
 
-    ul {
-      padding-left: 20px;
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      backdrop-filter: blur(3px);
     }
 
-    li {
-      margin-bottom: 6px;
+    .contact-pill a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .contact-pill a:hover {
+      text-decoration: underline;
+    }
+
+    .nav-card {
+      margin-top: 20px;
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 14px 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nav-links a {
+      color: var(--primary-2);
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #edf4fb;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: #dceaf7;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .sidebar .card + .card,
+    .main .card + .card {
+      margin-top: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-title h3 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      letter-spacing: 0.3px;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, #d8e5f1, transparent);
+      border-radius: 50px;
+    }
+
+    .profile-text {
+      color: var(--text);
+      text-align: justify;
     }
 
     .tag-list {
@@ -149,159 +255,1273 @@
     }
 
     .tag {
-      background: #dceaf7;
-      padding: 6px 10px;
-      border-radius: 20px;
-      font-size: 0.9rem;
+      background: #e8f0f8;
+      color: var(--primary);
+      border: 1px solid #d4e2ef;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .simple-list {
+      list-style: none;
+    }
+
+    .simple-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #edf2f7;
+      color: var(--text);
+    }
+
+    .simple-list li:last-child {
+      border-bottom: none;
+    }
+
+    .edu-item,
+    .exp-item,
+    .pub-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .edu-item:last-child,
+    .exp-item:last-child,
+    .pub-item:last-child {
+      border-bottom: none;
+    }
+
+    .edu-item h4,
+    .exp-item h4,
+    .pub-item h4 {
+      color: var(--primary);
+      font-size: 1.02rem;
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.93rem;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .exp-item ul,
+    .project-list,
+    .achievement-list {
+      padding-left: 18px;
+    }
+
+    .project-list li,
+    .achievement-list li,
+    .exp-item li {
+      margin-bottom: 7px;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #edf5fc, #f8fbff);
+      border: 1px solid #d9e8f5;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .highlight-box strong {
+      color: var(--primary);
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary-2);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #173e62;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .btn-soft {
+      background: #edf4fb;
+      color: var(--primary);
+      border: 1px solid #d7e5f2;
+    }
+
+    .btn-soft:hover {
+      background: #dfeefa;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .pub-links {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pub-link {
+      display: inline-block;
+      background: #eef5fb;
+      color: var(--primary);
+      border: 1px solid #d4e2ef;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .pub-link:hover {
+      background: #dfeefa;
+      text-decoration: none;
     }
 
     .footer {
+      margin-top: 22px;
       text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #eee;
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding: 18px 10px 8px;
     }
 
-    @media (max-width: 850px) {
-      .main {
+    @media (max-width: 980px) {
+      .hero-inner {
         grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+      }
+
+      .hero-text p {
+        text-align: left;
+      }
+
+      .contact-bar {
+        justify-content: center;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrapper {
+        width: min(100% - 16px, 100%);
+      }
+
+      .hero-inner,
+      .card {
+        padding: 20px;
+      }
+
+      .hero-text h1 {
+        font-size: 2.15rem;
+      }
+
+      .photo-box {
+        width: 160px;
+        height: 160px;
       }
     }
   </style>
 </head>
-
 <body>
 
-<div class="container">
+  <div class="wrapper">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="header-content">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="photo-box">
+          <img src="profile.jpg" alt="Manpreet Kour Photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <div class="photo-fallback" style="display:none;">
+            Upload your photo as<br><strong>profile.jpg</strong>
+          </div>
+        </div>
 
-      <!-- PHOTO -->
-      <div class="photo-box">
-        <img src="mypicture.jpeg" alt="Manpreet Kour Photo">
-      </div>
+        <div class="hero-text">
+          <h1>Manpreet Kour</h1>
+          <h2>Ph.D. Candidate | AI for Accessibility | Deep Learning Researcher</h2>
+          <p>
+            I am a research-oriented Ph.D. student working on transforming visual content to enhance
+            accessibility of illustrations for students with visual impairments. My work focuses on
+            AI-driven solutions for accessible diagram and chart interpretation, combining computer vision,
+            multimodal interaction, and deep learning for inclusive education. :contentReference[oaicite:1]{index=1}
+          </p>
 
-      <!-- TEXT -->
-      <div class="header-text">
-        <h1>Manpreet Kour</h1>
-        <h2>M.Sc. International Biometrics & Intelligent Vision</h2>
+          <div class="contact-bar">
+            <div class="contact-pill">📞 +33 7 45 54 46 51</div>
+            <div class="contact-pill"><a href="mailto:manpreet.kour@u-pec.fr">✉️ manpreet.kour@u-pec.fr</a></div>
+            <div class="contact-pill"><a href="https://www.linkedin.com/in/manpreet121" target="_blank">🔗 LinkedIn</a></div>
+            <div class="contact-pill"><a href="https://github.com/manpreet588" target="_blank">💻 GitHub</a></div>
+          </div>
 
-        <div class="contact">
-          <span>📞 +33 745544651</span>
-          <a href="mailto:kourmanpreet588@gmail.com">✉️ Email</a>
-          <a href="https://linkedin.com/in/manpreetkour121">🔗 LinkedIn</a>
-          <a href="https://github.com/manpreet588">💻 GitHub</a>
+          <div class="button-row">
+            <a class="btn btn-primary" href="ManpreetKourCV.pdf" target="_blank">Download CV PDF</a>
+            <a class="btn btn-soft" href="#publications">View Publications</a>
+          </div>
         </div>
       </div>
+    </header>
 
-    </div>
-  </div>
-
-  <!-- MAIN -->
-  <div class="main">
-
-    <!-- LEFT -->
-    <div class="left-column">
-
-      <div class="section">
-        <h3>Profile</h3>
-        <p>
-          Research-oriented individual with a background in biometrics, computer vision,
-          and machine learning. Interested in AI, deep learning, and data-driven systems.
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>Skills</h3>
-        <div class="tag-list">
-          <span class="tag">Python</span>
-          <span class="tag">MATLAB</span>
-          <span class="tag">Machine Learning</span>
-          <span class="tag">TensorFlow</span>
-          <span class="tag">PyTorch</span>
-          <span class="tag">OpenCV</span>
-          <span class="tag">PHP</span>
-          <span class="tag">MySQL</span>
-        </div>
-      </div>
-
-      <div class="section">
-        <h3>Languages</h3>
-        <ul>
-          <li>English — C2</li>
-          <li>French — A2</li>
-          <li>Hindi — C2</li>
-          <li>Punjabi — C1</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>CV</h3>
-        <a href="ManpreetKourCV.pdf">Download PDF</a>
-      </div>
-
+    <div class="nav-card">
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#languages">Languages</a>
+      </nav>
     </div>
 
-    <!-- RIGHT -->
-    <div class="right-column">
+    <div class="grid">
+      <aside class="sidebar">
 
-      <div class="section">
-        <h3>Work Experience</h3>
+        <section class="card" id="about">
+          <div class="section-title">
+            <h3>Profile</h3>
+            <div class="section-line"></div>
+          </div>
+          <p class="profile-text">
+            Research-oriented Ph.D. candidate in Informatics at Université Paris-Est Créteil, France.
+            My thesis, <strong>Diagram Analysis for Visually Impaired Readers</strong>, explores how AI,
+            deep learning, and multimodal accessibility systems can make visual educational content more
+            understandable for blind and visually impaired users. :contentReference[oaicite:2]{index=2}
+          </p>
+        </section>
 
-        <div class="item">
-          <h4>Project Intern — LIRIS/CNRS Lab</h4>
-          <div class="meta">Feb 2024 – July 2024</div>
-          <ul>
-            <li>Deep fuzzy extractor for document integrity</li>
-            <li>Worked with TensorFlow, scikit-learn, OpenCV</li>
+        <section class="card">
+          <div class="section-title">
+            <h3>Research Focus</h3>
+            <div class="section-line"></div>
+          </div>
+          <div class="tag-list">
+            <span class="tag">AI for Accessibility</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Chart Interpretation</span>
+            <span class="tag">Diagram Analysis</span>
+            <span class="tag">Visual Impairment Support</span>
+            <span class="tag">Multimodal Interfaces</span>
+            <span class="tag">Inclusive Education</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-title">
+            <h3>Skills</h3>
+            <div class="section-line"></div>
+          </div>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Image Processing</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">API Handling</span>
+            <span class="tag">Software Architecture</span>
+          </div>
+        </section>
+
+        <section class="card" id="languages">
+          <div class="section-title">
+            <h3>Languages</h3>
+            <div class="section-line"></div>
+          </div>
+          <ul class="simple-list">
+            <li><strong>English</strong> — C2</li>
+            <li><strong>French</strong> — A2</li>
+            <li><strong>Hindi</strong> — C2</li>
+            <li><strong>Punjabi</strong> — C1</li>
           </ul>
-        </div>
+        </section>
 
-        <div class="item">
-          <h4>Software Engineer — Toxsl Technologies</h4>
-          <div class="meta">2020 – 2022</div>
-          <ul>
-            <li>Worked on Yii framework (PHP)</li>
-            <li>REST APIs and backend systems</li>
+        <section class="card">
+          <div class="section-title">
+            <h3>Quick Access</h3>
+            <div class="section-line"></div>
+          </div>
+          <div class="highlight-box">
+            <p><strong>Photo:</strong> upload as <code>profile.jpg</code></p>
+            <p><strong>CV PDF:</strong> upload as <code>ManpreetKourCV.pdf</code></p>
+            <p><strong>Repository:</strong> same folder as <code>index.html</code></p>
+          </div>
+        </section>
+
+      </aside>
+
+      <main class="main">
+
+        <section class="card" id="education">
+          <div class="section-title">
+            <h3>Education</h3>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="edu-item">
+            <h4>Ph.D. in Informatics — Université Paris-Est Créteil, France</h4>
+            <div class="meta">2024 – Present</div>
+            <p>Research theme: diagram and visual content accessibility for visually impaired readers. :contentReference[oaicite:3]{index=3}</p>
+          </div>
+
+          <div class="edu-item">
+            <h4>M.Sc. in Biometrics and Intelligent Vision — Université Paris-Est Créteil, France</h4>
+            <div class="meta">2022 – 2024</div>
+          </div>
+
+          <div class="edu-item">
+            <h4>B.Tech. in Computer Science — Eternal University, India</h4>
+            <div class="meta">2016 – 2020</div>
+          </div>
+        </section>
+
+        <section class="card" id="experience">
+          <div class="section-title">
+            <h3>Work Experience</h3>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="exp-item">
+            <h4>Project Intern — LIRIS / CNRS Lab, Lyon, France</h4>
+            <div class="meta">February 2024 – July 2024</div>
+            <ul>
+              <li>Worked on neural fuzzy extractor and document integrity-check projects.</li>
+              <li>Gained experience with TensorFlow, scikit-learn, and OpenCV.</li>
+              <li>Expanded applied knowledge in deep learning workflows and vision-related models. :contentReference[oaicite:4]{index=4}</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h4>Software Developer — Toxsl Technologies, India</h4>
+            <div class="meta">August 2020 – August 2022</div>
+            <ul>
+              <li>Worked with PHP frameworks, software architecture, and API handling.</li>
+              <li>Contributed to backend development and project management tasks. :contentReference[oaicite:5]{index=5}</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h4>Software Developer Intern — Toxsl Technologies, India</h4>
+            <div class="meta">January 2020 – August 2020</div>
+            <ul>
+              <li>Learned PHP frameworks, architecture flow, and practical API handling. :contentReference[oaicite:6]{index=6}</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card" id="projects">
+          <div class="section-title">
+            <h3>Projects</h3>
+            <div class="section-line"></div>
+          </div>
+
+          <ul class="project-list">
+            <li><strong>Unity AR Game:</strong> Coconut Shy</li>
+            <li><strong>MRI Image Generation:</strong> StyleGAN-based generation of coronal brain MRI images</li>
+            <li><strong>Face Recognition with Human MRI:</strong> work involving VGG, ResNet, and FaceNet</li>
+            <li><strong>COVID-19 Data Visualization:</strong> analysis and visualization using Python</li>
           </ul>
-        </div>
+        </section>
 
-      </div>
+        <section class="card" id="publications">
+          <div class="section-title">
+            <h3>Publications & Seminars</h3>
+            <div class="section-line"></div>
+          </div>
 
-      <div class="section">
-        <h3>Education</h3>
-        <div class="item">
-          <h4>M.Sc — UPEC, France</h4>
-          <div class="meta">2022 – 2024</div>
-        </div>
+          <div class="pub-item">
+            <h4>Making Charts Accessible: Bar and Pie Chart Interpretations</h4>
+            <div class="meta">M. Kour, G. Hains and M. Saber — ComComAp 2025, Madrid, Spain</div>
+            <p>2025 Computing, Communications and IoT Applications, pp. 318–323. DOI: 10.1109/ComComAp68359.2025.11353202.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://ieeexplore.ieee.org/document/11353202" target="_blank">IEEE</a>
+            </div>
+          </div>
 
-        <div class="item">
-          <h4>B.Tech — Computer Science</h4>
-          <div class="meta">2016 – 2020</div>
-        </div>
-      </div>
+          <div class="pub-item">
+            <h4>Diagram Analysis for Visually Impaired Readers</h4>
+            <div class="meta">M. Kour, G. Hains and M. Saber — ICIIP 2025, Solan, India</div>
+            <p>2025 Eighth International Conference on Image Information Processing, pp. 332–337. DOI: 10.1109/ICIIP68302.2025.11346210.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://ieeexplore.ieee.org/document/11346210" target="_blank">IEEE</a>
+            </div>
+          </div>
 
-      <div class="section">
-        <h3>Projects</h3>
-        <ul>
-          <li>Unity AR Game</li>
-          <li>Brain MRI Generation (StyleGAN)</li>
-          <li>Face Recognition using CNN models</li>
-          <li>COVID-19 Data Visualization</li>
-        </ul>
-      </div>
+          <div class="pub-item">
+            <h4>INOVISUP – BAR & PIE CHARTS</h4>
+            <div class="meta">ERGANEO technology sheet</div>
+            <div class="pub-links">
+              <a class="pub-link" href="https://www.erganeo.com/fr/793" target="_blank">ERGANEO</a>
+            </div>
+          </div>
 
+          <div class="pub-item">
+            <h4>Améliorer la compréhension des diagrammes pour les personnes aveugles ou malvoyantes</h4>
+            <div class="meta">Manpreet Kour, Gaétan Hains, Mohamed Saber, Karine Gros — IFRATH-JCJC2025, Paris, May 2025</div>
+            <p>Conference presentation, proceedings page 35.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://ifrath.fr/jcjc2025/wp-content/uploads/sites/15/2025/09/actes_jcjc2025.pdf" target="_blank">Proceedings PDF</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Analysis of Bar Charts and Pie Charts for Blind or Visually Impaired Readers</h4>
+            <div class="meta">Manpreet Kour, Gaétan Hains, Mohamed Saber — HAL preprint, October 2025</div>
+            <div class="pub-links">
+              <a class="pub-link" href="https://hal.science/hal-05287303" target="_blank">HAL</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Diagram Analysis for Visually Impaired Readers</h4>
+            <div class="meta">Manpreet Kour, Gaétan Hains, Mohamed Saber — HAL preprint</div>
+            <div class="pub-links">
+              <a class="pub-link" href="https://hal.science/hal-05239759" target="_blank">HAL</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Diagram Annotation and Classification for Visually Impaired People in Higher Education</h4>
+            <div class="meta">Ajitesh Parihar, Gaétan Hains, Manpreet Kour, et al. — TechRxiv, April 22, 2025</div>
+            <p>DOI: 10.36227/techrxiv.174535333.38097989/v1</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://doi.org/10.36227/techrxiv.174535333.38097989/v1" target="_blank">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>INOVISUP Project Communication</h4>
+            <div class="meta">LinkedIn project post</div>
+            <div class="pub-links">
+              <a class="pub-link" href="https://www.linkedin.com/posts/upec%E2%80%94chaire-handicap-emploi-et-sant%C3%A9-au-travail_projet-inovisup-activity-7391057347177263104-NAYK" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Activity Diagrams Analysis for Visually Impaired Students</h4>
+            <div class="meta">Dolcy Sareen, Manpreet Kour, Mohamed Saber — 2026</div>
+            <p>Université Paris-Est Créteil Val de Marne.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://hal.science/hal-05569960" target="_blank">HAL</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Line Graph Interpretation Tool for Visually Impaired Users</h4>
+            <div class="meta">Ajitesh Parihar, Manpreet Kour, Mohamed Saber — 2026</div>
+            <p>Working paper / preprint.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://hal.science/hal-05483297" target="_blank">HAL</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="achievements">
+          <div class="section-title">
+            <h3>Achievements & Academic Service</h3>
+            <div class="section-line"></div>
+          </div>
+
+          <ul class="achievement-list">
+            <li>Reviewed papers for the 7th and 6th International Conference on Bio-engineering for Smart Technologies, Italy / ESME Paris, 2025–2026. :contentReference[oaicite:7]{index=7}</li>
+            <li>Member of the Organizing Committee for the 6th and 5th International Conference on Bio-engineering for Smart Technologies, ESME Paris, 2025 and 2023. :contentReference[oaicite:8]{index=8}</li>
+            <li>Committee member in international and national events at Eternal University, 2017–2018. :contentReference[oaicite:9]{index=9}</li>
+            <li>Coordinator of XTREEME 2018 and winner of 1st and 3rd place in innovation events at Eternal University. :contentReference[oaicite:10]{index=10}</li>
+          </ul>
+        </section>
+
+      </main>
     </div>
 
+    <footer class="footer">
+      Built with GitHub Pages • Premium academic profile website
+    </footer>
   </div>
 
-  <div class="footer">
-    Built with GitHub Pages
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manpreet Kour | Ph.D. Candidate | AI for Accessibility</title>
+  <meta name="description" content="Manpreet Kour - Ph.D. Candidate in Informatics, AI for Accessibility, Deep Learning Researcher" />
+
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --primary: #163a5c;
+      --primary-2: #1f4e79;
+      --accent: #2d6a9f;
+      --soft: #eef4fa;
+      --text: #1f2937;
+      --muted: #5b6777;
+      --line: #dbe5ef;
+      --shadow: 0 18px 45px rgba(17, 37, 63, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(45, 106, 159, 0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(31, 78, 121, 0.08), transparent 22%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrapper {
+      width: min(1180px, calc(100% - 28px));
+      margin: 26px auto 42px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #163a5c 0%, #1f4e79 48%, #2d6a9f 100%);
+      color: #fff;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 260px;
+      height: 260px;
+      top: -90px;
+      right: -70px;
+    }
+
+    .hero::after {
+      width: 180px;
+      height: 180px;
+      bottom: -60px;
+      left: -40px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 34px;
+      align-items: center;
+      padding: 40px 42px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .photo-box {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 6px solid rgba(255, 255, 255, 0.92);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      background: rgba(255,255,255,0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-fallback {
+      font-size: 14px;
+      text-align: center;
+      padding: 18px;
+      color: #f6fbff;
+    }
+
+    .hero-text h1 {
+      font-size: 2.9rem;
+      line-height: 1.05;
+      margin-bottom: 10px;
+      letter-spacing: 0.2px;
+    }
+
+    .hero-text h2 {
+      font-size: 1.15rem;
+      font-weight: 400;
+      opacity: 0.97;
+      margin-bottom: 18px;
+    }
+
+    .hero-text p {
+      max-width: 840px;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.94);
+      margin-bottom: 18px;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      backdrop-filter: blur(3px);
+    }
+
+    .contact-pill a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .contact-pill a:hover {
+      text-decoration: underline;
+    }
+
+    .nav-card {
+      margin-top: 20px;
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 14px 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nav-links a {
+      color: var(--primary-2);
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #edf4fb;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: #dceaf7;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .sidebar .card + .card,
+    .main .card + .card {
+      margin-top: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-title h3 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      letter-spacing: 0.3px;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, #d8e5f1, transparent);
+      border-radius: 50px;
+    }
+
+    .profile-text {
+      color: var(--text);
+      text-align: justify;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: #e8f0f8;
+      color: var(--primary);
+      border: 1px solid #d4e2ef;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .simple-list {
+      list-style: none;
+    }
+
+    .simple-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #edf2f7;
+      color: var(--text);
+    }
+
+    .simple-list li:last-child {
+      border-bottom: none;
+    }
+
+    .edu-item,
+    .exp-item,
+    .pub-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .edu-item:last-child,
+    .exp-item:last-child,
+    .pub-item:last-child {
+      border-bottom: none;
+    }
+
+    .edu-item h4,
+    .exp-item h4,
+    .pub-item h4 {
+      color: var(--primary);
+      font-size: 1.02rem;
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.93rem;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .exp-item ul,
+    .project-list,
+    .achievement-list {
+      padding-left: 18px;
+    }
+
+    .project-list li,
+    .achievement-list li,
+    .exp-item li {
+      margin-bottom: 7px;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #edf5fc, #f8fbff);
+      border: 1px solid #d9e8f5;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .highlight-box strong {
+      color: var(--primary);
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary-2);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #173e62;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .btn-soft {
+      background: #edf4fb;
+      color: var(--primary);
+      border: 1px solid #d7e5f2;
+    }
+
+    .btn-soft:hover {
+      background: #dfeefa;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .pub-links {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pub-link {
+      display: inline-block;
+      background: #eef5fb;
+      color: var(--primary);
+      border: 1px solid #d4e2ef;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .pub-link:hover {
+      background: #dfeefa;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding: 18px 10px 8px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+      }
+
+      .hero-text p {
+        text-align: left;
+      }
+
+      .contact-bar {
+        justify-content: center;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrapper {
+        width: min(100% - 16px, 100%);
+      }
+
+      .hero-inner,
+      .card {
+        padding: 20px;
+      }
+
+      .hero-text h1 {
+        font-size: 2.15rem;
+      }
+
+      .photo-box {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="photo-box">
+          <img src="profile.jpg" alt="Manpreet Kour Photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <div class="photo-fallback" style="display:none;">
+            Upload your photo as<br><strong>profile.jpg</strong>
+          </div>
+        </div>
+
+        <div class="hero-text">
+          <h1>Manpreet Kour</h1>
+          <h2>Ph.D. Candidate | AI for Accessibility | Deep Learning Researcher</h2>
+          <p>
+            I am a research-oriented Ph.D. student working on transforming visual content to enhance
+            accessibility of illustrations for students with visual impairments. My work focuses on
+            AI-driven solutions for accessible diagram and chart interpretation, combining computer vision,
+            multimodal interaction, and deep learning for inclusive education. :contentReference[oaicite:1]{index=1}
+          </p>
+
+          <div class="contact-bar">
+            <div class="contact-pill">📞 +33 7 45 54 46 51</div>
+            <div class="contact-pill"><a href="mailto:manpreet.kour@u-pec.fr">✉️ manpreet.kour@u-pec.fr</a></div>
+            <div class="contact-pill"><a href="https://www.linkedin.com/in/manpreet121" target="_blank">🔗 LinkedIn</a></div>
+            <div class="contact-pill"><a href="https://github.com/manpreet588" target="_blank">💻 GitHub</a></div>
+          </div>
+
+          <div class="button-row">
+            <a class="btn btn-primary" href="ManpreetKourCV.pdf" target="_blank">Download CV PDF</a>
+            <a class="btn btn-soft" href="#publications">View Publications</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-card">
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#languages">Languages</a>
+      </nav>
+    </div>
+
+    <div class="grid">
+      <aside class="sidebar">
+
+        <section class="card" id="about">
+          <div class="section-title">
+            <h3>Profile</h3>
+            <div class="section-line"></div>
+          </div>
+          <p class="profile-text">
+            Research-oriented Ph.D. candidate in Informatics at Université Paris-Est Créteil, France.
+            My thesis, <strong>Diagram Analysis for Visually Impaired Readers</strong>, explores how AI,
+            deep learning, and multimodal accessibility systems can make visual educational content more
+            understandable for blind and visually impaired users. :contentReference[oaicite:2]{index=2}
+          </p>
+        </section>
+
+        <section class="card">
+          <div class="section-title">
+            <h3>Research Focus</h3>
+            <div class="section-line"></div>
+          </div>
+          <div class="tag-list">
+            <span class="tag">AI for Accessibility</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Chart Interpretation</span>
+            <span class="tag">Diagram Analysis</span>
+            <span class="tag">Visual Impairment Support</span>
+            <span class="tag">Multimodal Interfaces</span>
+            <span class="tag">Inclusive Education</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-title">
+            <h3>Skills</h3>
+            <div class="section-line"></div>
+          </div>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Image Processing</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">API Handling</span>
+            <span class="tag">Software Architecture</span>
+          </div>
+        </section>
+
+        <section class="card" id="languages">
+          <div class="section-title">
+            <h3>Languages</h3>
+            <div class="section-line"></div>
+          </div>
+          <ul class="simple-list">
+            <li><strong>English</strong> — C2</li>
+            <li><strong>French</strong> — A2</li>
+            <li><strong>Hindi</strong> — C2</li>
+            <li><strong>Punjabi</strong> — C1</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <div class="section-title">
+            <h3>Quick Access</h3>
+            <div class="section-line"></div>
+          </div>
+          <div class="highlight-box">
+            <p><strong>Photo:</strong> upload as <code>profile.jpg</code></p>
+            <p><strong>CV PDF:</strong> upload as <code>ManpreetKourCV.pdf</code></p>
+            <p><strong>Repository:</strong> same folder as <code>index.html</code></p>
+          </div>
+        </section>
+
+      </aside>
+
+      <main class="main">
+
+        <section class="card" id="education">
+          <div class="section-title">
+            <h3>Education</h3>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="edu-item">
+            <h4>Ph.D. in Informatics — Université Paris-Est Créteil, France</h4>
+            <div class="meta">2024 – Present</div>
+            <p>Research theme: diagram and visual content accessibility for visually impaired readers. :contentReference[oaicite:3]{index=3}</p>
+          </div>
+
+          <div class="edu-item">
+            <h4>M.Sc. in Biometrics and Intelligent Vision — Université Paris-Est Créteil, France</h4>
+            <div class="meta">2022 – 2024</div>
+          </div>
+
+          <div class="edu-item">
+            <h4>B.Tech. in Computer Science — Eternal University, India</h4>
+            <div class="meta">2016 – 2020</div>
+          </div>
+        </section>
+
+        <section class="card" id="experience">
+          <div class="section-title">
+            <h3>Work Experience</h3>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="exp-item">
+            <h4>Project Intern — LIRIS / CNRS Lab, Lyon, France</h4>
+            <div class="meta">February 2024 – July 2024</div>
+            <ul>
+              <li>Worked on neural fuzzy extractor and document integrity-check projects.</li>
+              <li>Gained experience with TensorFlow, scikit-learn, and OpenCV.</li>
+              <li>Expanded applied knowledge in deep learning workflows and vision-related models. :contentReference[oaicite:4]{index=4}</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h4>Software Developer — Toxsl Technologies, India</h4>
+            <div class="meta">August 2020 – August 2022</div>
+            <ul>
+              <li>Worked with PHP frameworks, software architecture, and API handling.</li>
+              <li>Contributed to backend development and project management tasks. :contentReference[oaicite:5]{index=5}</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h4>Software Developer Intern — Toxsl Technologies, India</h4>
+            <div class="meta">January 2020 – August 2020</div>
+            <ul>
+              <li>Learned PHP frameworks, architecture flow, and practical API handling. :contentReference[oaicite:6]{index=6}</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card" id="projects">
+          <div class="section-title">
+            <h3>Projects</h3>
+            <div class="section-line"></div>
+          </div>
+
+          <ul class="project-list">
+            <li><strong>Unity AR Game:</strong> Coconut Shy</li>
+            <li><strong>MRI Image Generation:</strong> StyleGAN-based generation of coronal brain MRI images</li>
+            <li><strong>Face Recognition with Human MRI:</strong> work involving VGG, ResNet, and FaceNet</li>
+            <li><strong>COVID-19 Data Visualization:</strong> analysis and visualization using Python</li>
+          </ul>
+        </section>
+
+        <section class="card" id="publications">
+          <div class="section-title">
+            <h3>Publications & Seminars</h3>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Making Charts Accessible: Bar and Pie Chart Interpretations</h4>
+            <div class="meta">M. Kour, G. Hains and M. Saber — ComComAp 2025, Madrid, Spain</div>
+            <p>2025 Computing, Communications and IoT Applications, pp. 318–323. DOI: 10.1109/ComComAp68359.2025.11353202.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://ieeexplore.ieee.org/document/11353202" target="_blank">IEEE</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Diagram Analysis for Visually Impaired Readers</h4>
+            <div class="meta">M. Kour, G. Hains and M. Saber — ICIIP 2025, Solan, India</div>
+            <p>2025 Eighth International Conference on Image Information Processing, pp. 332–337. DOI: 10.1109/ICIIP68302.2025.11346210.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://ieeexplore.ieee.org/document/11346210" target="_blank">IEEE</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>INOVISUP – BAR & PIE CHARTS</h4>
+            <div class="meta">ERGANEO technology sheet</div>
+            <div class="pub-links">
+              <a class="pub-link" href="https://www.erganeo.com/fr/793" target="_blank">ERGANEO</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Améliorer la compréhension des diagrammes pour les personnes aveugles ou malvoyantes</h4>
+            <div class="meta">Manpreet Kour, Gaétan Hains, Mohamed Saber, Karine Gros — IFRATH-JCJC2025, Paris, May 2025</div>
+            <p>Conference presentation, proceedings page 35.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://ifrath.fr/jcjc2025/wp-content/uploads/sites/15/2025/09/actes_jcjc2025.pdf" target="_blank">Proceedings PDF</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Analysis of Bar Charts and Pie Charts for Blind or Visually Impaired Readers</h4>
+            <div class="meta">Manpreet Kour, Gaétan Hains, Mohamed Saber — HAL preprint, October 2025</div>
+            <div class="pub-links">
+              <a class="pub-link" href="https://hal.science/hal-05287303" target="_blank">HAL</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Diagram Analysis for Visually Impaired Readers</h4>
+            <div class="meta">Manpreet Kour, Gaétan Hains, Mohamed Saber — HAL preprint</div>
+            <div class="pub-links">
+              <a class="pub-link" href="https://hal.science/hal-05239759" target="_blank">HAL</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Diagram Annotation and Classification for Visually Impaired People in Higher Education</h4>
+            <div class="meta">Ajitesh Parihar, Gaétan Hains, Manpreet Kour, et al. — TechRxiv, April 22, 2025</div>
+            <p>DOI: 10.36227/techrxiv.174535333.38097989/v1</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://doi.org/10.36227/techrxiv.174535333.38097989/v1" target="_blank">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>INOVISUP Project Communication</h4>
+            <div class="meta">LinkedIn project post</div>
+            <div class="pub-links">
+              <a class="pub-link" href="https://www.linkedin.com/posts/upec%E2%80%94chaire-handicap-emploi-et-sant%C3%A9-au-travail_projet-inovisup-activity-7391057347177263104-NAYK" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Activity Diagrams Analysis for Visually Impaired Students</h4>
+            <div class="meta">Dolcy Sareen, Manpreet Kour, Mohamed Saber — 2026</div>
+            <p>Université Paris-Est Créteil Val de Marne.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://hal.science/hal-05569960" target="_blank">HAL</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <h4>Line Graph Interpretation Tool for Visually Impaired Users</h4>
+            <div class="meta">Ajitesh Parihar, Manpreet Kour, Mohamed Saber — 2026</div>
+            <p>Working paper / preprint.</p>
+            <div class="pub-links">
+              <a class="pub-link" href="https://hal.science/hal-05483297" target="_blank">HAL</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="achievements">
+          <div class="section-title">
+            <h3>Achievements & Academic Service</h3>
+            <div class="section-line"></div>
+          </div>
+
+          <ul class="achievement-list">
+            <li>Reviewed papers for the 7th and 6th International Conference on Bio-engineering for Smart Technologies, Italy / ESME Paris, 2025–2026. :contentReference[oaicite:7]{index=7}</li>
+            <li>Member of the Organizing Committee for the 6th and 5th International Conference on Bio-engineering for Smart Technologies, ESME Paris, 2025 and 2023. :contentReference[oaicite:8]{index=8}</li>
+            <li>Committee member in international and national events at Eternal University, 2017–2018. :contentReference[oaicite:9]{index=9}</li>
+            <li>Coordinator of XTREEME 2018 and winner of 1st and 3rd place in innovation events at Eternal University. :contentReference[oaicite:10]{index=10}</li>
+          </ul>
+        </section>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      Built with GitHub Pages
+    </footer>
   </div>
 
-</div>
 </body>
 </html>
