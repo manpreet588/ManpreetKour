@@ -17,15 +17,15 @@
       --primary-2: #1f4e79;
       --accent: #2f7dbd;
       --accent-soft: #eaf4ff;
+      --accent-strong: #1d6fb0;
       --text: #1f2937;
       --muted: #5b6777;
       --line: #dbe6f0;
-      --success: #1d7a64;
       --shadow: 0 18px 50px rgba(15, 34, 56, 0.12);
       --radius-xl: 28px;
       --radius-lg: 20px;
       --radius-md: 14px;
-      --maxw: 1220px;
+      --maxw: 1280px;
     }
 
     * {
@@ -59,7 +59,7 @@
 
     .wrapper {
       width: min(var(--maxw), calc(100% - 28px));
-      margin: 26px auto 40px;
+      margin: 16px auto 34px;
     }
 
     .hero {
@@ -67,7 +67,7 @@
       overflow: hidden;
       background: linear-gradient(135deg, #123758 0%, #1f4e79 50%, #2d6a9f 100%);
       color: #fff;
-      border-radius: 32px;
+      border-radius: 26px;
       box-shadow: var(--shadow);
     }
 
@@ -81,41 +81,40 @@
     }
 
     .hero::before {
-      width: 300px;
-      height: 300px;
-      right: -70px;
-      top: -80px;
+      width: 240px;
+      height: 240px;
+      right: -60px;
+      top: -65px;
     }
 
     .hero::after {
-      width: 190px;
-      height: 190px;
-      left: -40px;
-      bottom: -40px;
+      width: 160px;
+      height: 160px;
+      left: -38px;
+      bottom: -38px;
     }
 
     .hero-inner {
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 34px;
+      grid-template-columns: 160px 1fr;
+      gap: 26px;
       align-items: center;
-      padding: 42px 44px;
+      padding: 20px 34px 24px;
     }
 
     .photo-box {
-      width: 190px;
-      height: 190px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       overflow: hidden;
-      border: 6px solid rgba(255, 255, 255, 0.92);
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.20);
-      background: rgba(255, 255, 255, 0.12);
+      border: 5px solid rgba(255, 255, 255, 0.96);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255, 0.14);
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
     }
 
     .photo-box img {
@@ -127,50 +126,49 @@
 
     .photo-fallback {
       color: #f8fbff;
-      font-size: 14px;
+      font-size: 13px;
       text-align: center;
-      padding: 18px;
+      padding: 14px;
     }
 
     .hero-text h1 {
       font-size: 3rem;
-      line-height: 1.05;
+      line-height: 1.02;
+      margin-bottom: 8px;
       letter-spacing: 0.2px;
-      margin-bottom: 10px;
     }
 
     .hero-text h2 {
-      font-size: 1.18rem;
+      font-size: 1rem;
       font-weight: 400;
       color: rgba(255, 255, 255, 0.96);
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
 
     .hero-text p {
-      font-size: 1rem;
-      max-width: 850px;
-      color: rgba(255, 255, 255, 0.94);
-      margin-bottom: 18px;
-      text-align: justify;
+      font-size: 0.98rem;
+      max-width: 910px;
+      color: rgba(255, 255, 255, 0.96);
+      margin-bottom: 14px;
     }
 
     .contact-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 18px;
+      gap: 10px;
+      margin-bottom: 14px;
     }
 
     .contact-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 9px 14px;
+      border-radius: 11px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       color: #fff;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       backdrop-filter: blur(3px);
     }
 
@@ -189,10 +187,11 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 12px 18px;
+      padding: 11px 18px;
       border-radius: 12px;
       font-weight: 700;
       transition: 0.2s ease;
+      cursor: pointer;
     }
 
     .btn-primary {
@@ -210,6 +209,7 @@
     .btn-soft {
       color: var(--primary);
       background: #ffffff;
+      border: 1px solid #ffffff;
     }
 
     .btn-soft:hover {
@@ -219,11 +219,11 @@
     }
 
     .nav-card {
-      margin-top: 20px;
+      margin-top: 14px;
       background: var(--surface);
-      border-radius: 18px;
+      border-radius: 14px;
       box-shadow: var(--shadow);
-      padding: 14px 16px;
+      padding: 10px 12px;
     }
 
     .nav-links {
@@ -236,9 +236,13 @@
       background: #edf4fb;
       color: var(--primary);
       font-weight: 700;
-      padding: 9px 13px;
-      border-radius: 999px;
+      padding: 9px 14px;
+      border-radius: 12px;
       transition: 0.2s ease;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
     }
 
     .nav-links a:hover {
@@ -249,32 +253,45 @@
 
     .layout {
       display: grid;
-      grid-template-columns: 350px 1fr;
-      gap: 22px;
-      margin-top: 22px;
+      grid-template-columns: 320px 1fr;
+      gap: 18px;
+      margin-top: 14px;
     }
 
     .stack > * + * {
-      margin-top: 22px;
+      margin-top: 16px;
     }
 
     .card {
       background: var(--surface);
-      border-radius: var(--radius-xl);
+      border-radius: 18px;
       box-shadow: var(--shadow);
-      padding: 26px;
+      padding: 18px;
     }
 
     .section-head {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 16px;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .section-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-soft);
+      color: var(--primary);
+      font-size: 0.95rem;
+      flex-shrink: 0;
     }
 
     .section-head h3 {
       color: var(--primary);
-      font-size: 1.22rem;
+      font-size: 1.08rem;
       white-space: nowrap;
       letter-spacing: 0.2px;
     }
@@ -287,8 +304,8 @@
     }
 
     .profile-text {
-      text-align: justify;
       color: var(--text);
+      font-size: 0.97rem;
     }
 
     .tag-list {
@@ -298,13 +315,13 @@
     }
 
     .tag {
-      padding: 8px 12px;
+      padding: 7px 12px;
       border-radius: 999px;
       background: var(--accent-soft);
       border: 1px solid #d8e9f9;
       color: var(--primary);
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.84rem;
     }
 
     .info-list {
@@ -312,88 +329,134 @@
     }
 
     .info-list li {
-      padding: 11px 0;
+      padding: 9px 0;
       border-bottom: 1px solid #edf2f7;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .info-list li:last-child {
       border-bottom: none;
     }
 
+    .lang-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22a55d;
+      flex-shrink: 0;
+    }
+
     .timeline-item,
     .pub-item {
       position: relative;
-      padding: 16px 0 18px 0;
+      padding: 12px 0 14px 0;
       border-bottom: 1px solid #edf2f7;
     }
 
     .timeline-item:last-child,
     .pub-item:last-child {
       border-bottom: none;
+      padding-bottom: 0;
     }
 
     .timeline-item h4,
     .pub-item h4 {
       color: var(--primary);
-      font-size: 1.05rem;
-      margin-bottom: 4px;
+      font-size: 1rem;
+      margin-bottom: 3px;
       line-height: 1.35;
     }
 
     .meta {
-      font-size: 0.93rem;
-      color: var(--muted);
+      font-size: 0.91rem;
+      color: var(--accent-strong);
       font-style: italic;
-      margin-bottom: 8px;
+      margin-bottom: 7px;
+      font-weight: 700;
     }
 
     .timeline-item ul,
-    .achievement-list {
+    .achievement-list,
+    .pub-list {
       padding-left: 18px;
     }
 
     .timeline-item li,
-    .achievement-list li {
-      margin-bottom: 7px;
+    .achievement-list li,
+    .pub-list li {
+      margin-bottom: 5px;
+    }
+
+    .timeline-item li:last-child,
+    .achievement-list li:last-child,
+    .pub-list li:last-child {
+      margin-bottom: 0;
     }
 
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      gap: 12px;
     }
 
     .mini-card {
       background: var(--surface-2);
       border: 1px solid #e5eef7;
-      border-radius: 18px;
-      padding: 16px;
+      border-radius: 14px;
+      padding: 13px 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .mini-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: #edf4fb;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
     }
 
     .mini-card h4 {
       color: var(--primary);
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    .mini-card p {
+      font-size: 0.94rem;
     }
 
     .pub-links {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 10px;
+      margin-top: 8px;
+      position: relative;
+      z-index: 20;
     }
 
     .pub-link {
       display: inline-block;
       border-radius: 999px;
-      padding: 7px 11px;
+      padding: 7px 12px;
       background: #edf4fb;
       border: 1px solid #d8e4f0;
       color: var(--primary);
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 700;
       position: relative;
-      z-index: 10;
+      z-index: 30;
+      pointer-events: auto;
+      cursor: pointer;
     }
 
     .pub-link:hover {
@@ -401,12 +464,26 @@
       background: #dfeefa;
     }
 
+    .pub-item-flex {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .ext-link {
+      color: var(--primary);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
     .footer {
-      margin-top: 22px;
+      margin-top: 14px;
       text-align: center;
       color: var(--muted);
       font-size: 0.92rem;
-      padding: 18px 12px 8px;
+      padding: 10px 12px 6px;
     }
 
     @media (max-width: 1024px) {
@@ -414,10 +491,6 @@
         grid-template-columns: 1fr;
         justify-items: center;
         text-align: center;
-      }
-
-      .hero-text p {
-        text-align: left;
       }
 
       .contact-bar,
@@ -432,25 +505,30 @@
 
     @media (max-width: 720px) {
       .wrapper {
-        width: min(100% - 16px, 100%);
+        width: min(100% - 14px, 100%);
       }
 
       .hero-inner,
       .card {
-        padding: 20px;
+        padding: 16px;
       }
 
       .hero-text h1 {
-        font-size: 2.2rem;
+        font-size: 2.15rem;
       }
 
       .photo-box {
-        width: 160px;
-        height: 160px;
+        width: 140px;
+        height: 140px;
       }
 
       .two-col {
         grid-template-columns: 1fr;
+      }
+
+      .nav-links a {
+        width: 100%;
+        justify-content: center;
       }
     }
   </style>
@@ -471,19 +549,19 @@
           <h1>Manpreet Kour</h1>
           <h2>Ph.D. Candidate | AI for Accessibility | INOVISUP Project Researcher</h2>
           <p>
-            I am a research-oriented Ph.D. student working on “Transforming Visual Content to Enhance Accessibility of Illustrations for Students with Visual Impairments”. My research focuses on creating innovative solutions to make visual information accessible to visually impaired students using AI, computer vision, deep learning, and multimodal interaction. The title of my Ph.D. is <strong>Diagram Analysis for Visually Impaired Readers</strong>. My thesis is part of the <strong>INOVISUP project</strong>, focused on non-visual reading of diagrams and accessibility in higher education.
+            I am a research-oriented Ph.D. student working on “Transforming Visual Content to Enhance Accessibility of Illustrations for Students with Visual Impairments”. My research focuses on creating innovative solutions to make visual information accessible to visually impaired students using AI, computer vision, deep learning, and multimodal interaction. The title of my Ph.D. is Diagram Analysis for Visually Impaired Readers. My thesis is part of the INOVISUP project, focused on non-visual reading of diagrams and accessibility in higher education.
           </p>
 
           <div class="contact-bar">
             <div class="contact-pill">📞 +33 7 45 54 46 51</div>
-            <div class="contact-pill"><a href="mailto:manpreet.kour@u-pec.fr">✉️ manpreet.kour@u-pec.fr</a></div>
-            <div class="contact-pill"><a href="https://www.linkedin.com/in/manpreet121" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a></div>
-            <div class="contact-pill"><a href="https://github.com/manpreet588" target="_blank" rel="noopener noreferrer">💻 GitHub</a></div>
+            <div class="contact-pill">✉️ <a href="mailto:manpreet.kour@u-pec.fr" target="_blank" rel="noopener noreferrer">manpreet.kour@u-pec.fr</a></div>
+            <div class="contact-pill">in <a href="https://www.linkedin.com/in/manpreet121" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+            <div class="contact-pill"> <a href="https://github.com/manpreet588" target="_blank" rel="noopener noreferrer">GitHub</a></div>
           </div>
 
           <div class="button-row">
-            <a class="btn btn-primary" href="Manpreet_Kour_OnePage_Designed_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
-            <a class="btn btn-soft" href="#publications">See Publications</a>
+            <a class="btn btn-primary" href="Manpreet_Kour_OnePage_Designed_CV.pdf" target="_blank" rel="noopener noreferrer">⬇ Download CV</a>
+            <a class="btn btn-soft" href="#publications" target="_self">👥 See Publications</a>
           </div>
         </div>
       </div>
@@ -491,14 +569,14 @@
 
     <div class="nav-card">
       <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#seminars">Seminars</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#languages">Languages</a>
+        <a href="#about" target="_self">👤 About</a>
+        <a href="#education" target="_self">🎓 Education</a>
+        <a href="#experience" target="_self">💼 Experience</a>
+        <a href="#projects" target="_self">🧪 Projects</a>
+        <a href="#publications" target="_self">📄 Publications</a>
+        <a href="#seminars" target="_self">👥 Seminars</a>
+        <a href="#achievements" target="_self">🏆 Achievements</a>
+        <a href="#languages" target="_self">🌐 Languages</a>
       </nav>
     </div>
 
@@ -506,6 +584,7 @@
       <aside class="stack">
         <section class="card" id="about">
           <div class="section-head">
+            <div class="section-icon">👤</div>
             <h3>Profile</h3>
             <div class="section-line"></div>
           </div>
@@ -516,6 +595,7 @@
 
         <section class="card">
           <div class="section-head">
+            <div class="section-icon">🎯</div>
             <h3>Research Focus</h3>
             <div class="section-line"></div>
           </div>
@@ -533,6 +613,7 @@
 
         <section class="card">
           <div class="section-head">
+            <div class="section-icon">💻</div>
             <h3>Skills</h3>
             <div class="section-line"></div>
           </div>
@@ -557,6 +638,7 @@
 
         <section class="card">
           <div class="section-head">
+            <div class="section-icon">⚗️</div>
             <h3>Research Project</h3>
             <div class="section-line"></div>
           </div>
@@ -564,20 +646,21 @@
             My Ph.D. research is part of the <strong>INOVISUP project</strong>, which focuses on improving non-visual access to diagrams and educational visual content for blind and visually impaired learners.
           </p>
           <div class="pub-links">
-            <a class="pub-link" href="https://inovisup.lacl.fr/" target="_blank" rel="noopener noreferrer">INOVISUP Website</a>
+            <a class="pub-link" href="https://inovisup.lacl.fr/" target="_blank" rel="noopener noreferrer">🌐 INOVISUP Website</a>
           </div>
         </section>
 
         <section class="card" id="languages">
           <div class="section-head">
+            <div class="section-icon">🌐</div>
             <h3>Languages</h3>
             <div class="section-line"></div>
           </div>
           <ul class="info-list">
-            <li><strong>English</strong> — C2</li>
-            <li><strong>French</strong> — A2</li>
-            <li><strong>Hindi</strong> — C2</li>
-            <li><strong>Punjabi</strong> — C1</li>
+            <li><span class="lang-dot"></span> <strong>English</strong> — C2</li>
+            <li><span class="lang-dot"></span> <strong>French</strong> — A2</li>
+            <li><span class="lang-dot"></span> <strong>Hindi</strong> — C2</li>
+            <li><span class="lang-dot"></span> <strong>Punjabi</strong> — C1</li>
           </ul>
         </section>
       </aside>
@@ -585,6 +668,7 @@
       <main class="stack">
         <section class="card" id="education">
           <div class="section-head">
+            <div class="section-icon">🎓</div>
             <h3>Education</h3>
             <div class="section-line"></div>
           </div>
@@ -608,6 +692,7 @@
 
         <section class="card" id="experience">
           <div class="section-head">
+            <div class="section-icon">💼</div>
             <h3>Work Experience</h3>
             <div class="section-line"></div>
           </div>
@@ -642,137 +727,126 @@
 
         <section class="card" id="projects">
           <div class="section-head">
+            <div class="section-icon">🧪</div>
             <h3>Projects</h3>
             <div class="section-line"></div>
           </div>
 
           <div class="two-col">
             <div class="mini-card">
-              <h4>Unity AR Game</h4>
-              <p>Coconut Shy</p>
+              <div class="mini-icon">🎮</div>
+              <div>
+                <h4>Unity AR Game</h4>
+                <p>Coconut Shy</p>
+              </div>
             </div>
             <div class="mini-card">
-              <h4>MRI Image Generation</h4>
-              <p>Coronal MRI generation using StyleGAN</p>
+              <div class="mini-icon">🧠</div>
+              <div>
+                <h4>MRI Image Generation</h4>
+                <p>Coronal MRI generation using StyleGAN</p>
+              </div>
             </div>
             <div class="mini-card">
-              <h4>Face Recognition with Human MRI</h4>
-              <p>Using VGG, ResNet, and FaceNet</p>
+              <div class="mini-icon">🧑‍💻</div>
+              <div>
+                <h4>Face Recognition with Human MRI</h4>
+                <p>Using VGG, ResNet, and FaceNet</p>
+              </div>
             </div>
             <div class="mini-card">
-              <h4>COVID-19 Data Visualization</h4>
-              <p>Python-based analysis and visualization project</p>
+              <div class="mini-icon">📊</div>
+              <div>
+                <h4>COVID-19 Data Visualization</h4>
+                <p>Python-based analysis and visualization project</p>
+              </div>
             </div>
           </div>
         </section>
 
         <section class="card" id="publications">
           <div class="section-head">
+            <div class="section-icon">📄</div>
             <h3>Publications</h3>
             <div class="section-line"></div>
           </div>
 
           <div class="pub-item">
-            <h4>Making Charts Accessible: Bar and Pie Chart Interpretations</h4>
-            <div class="meta">M. Kour, G. Hains and M. Saber — 2025 Computing, Communications and IoT Applications (ComComAp), Madrid, Spain, 2025</div>
-            <p>Pages 318–323. DOI: 10.1109/ComComAp68359.2025.11353202.</p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://ieeexplore.ieee.org/document/11353202" target="_blank" rel="noopener noreferrer">IEEE</a>
-            </div>
+            <h4>Making Charts Accessible: Bar and Pie Chart Interpretations — IEEE ComComAp 2025</h4>
           </div>
 
           <div class="pub-item">
-            <h4>Diagram Analysis for Visually Impaired Readers</h4>
-            <div class="meta">M. Kour, G. Hains and M. Saber — 2025 Eighth International Conference on Image Information Processing (ICIIP), Solan, India, 2025</div>
-            <p>Pages 332–337. DOI: 10.1109/ICIIP68302.2025.11346210.</p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://ieeexplore.ieee.org/document/11346210" target="_blank" rel="noopener noreferrer">IEEE</a>
-            </div>
+            <h4>Diagram Analysis for Visually Impaired Readers — ICIIP 2025</h4>
           </div>
 
           <div class="pub-item">
-            <h4>Diagram Annotation and Classification for Visually Impaired People in Higher Education</h4>
-            <div class="meta">Ajitesh Parihar, Gaétan Hains, Manpreet Kour, et al. — TechRxiv, April 22, 2025</div>
-            <p>DOI: 10.36227/techrxiv.174535333.38097989/v1</p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://doi.org/10.36227/techrxiv.174535333.38097989/v1" target="_blank" rel="noopener noreferrer">DOI</a>
-            </div>
+            <h4>Diagram Annotation and Classification for Visually Impaired People in Higher Education — TechRxiv 2025</h4>
           </div>
 
           <div class="pub-item">
-            <h4>Analysis of Bar Charts and Pie Charts for Blind or Visually Impaired Readers</h4>
-            <div class="meta">Manpreet Kour, Gaétan Hains, Mohamed Saber — HAL preprint, October 2025</div>
-            <div class="pub-links">
-              <a class="pub-link" href="https://hal.science/hal-05287303" target="_blank" rel="noopener noreferrer">HAL</a>
-            </div>
+            <h4>Analysis of Bar Charts and Pie Charts for Blind or Visually Impaired Readers — HAL 2025</h4>
           </div>
 
           <div class="pub-item">
-            <h4>Diagram Analysis for Visually Impaired Readers</h4>
-            <div class="meta">Manpreet Kour, Gaétan Hains, Mohamed Saber — HAL preprint</div>
-            <div class="pub-links">
-              <a class="pub-link" href="https://hal.science/hal-05239759" target="_blank" rel="noopener noreferrer">HAL</a>
-            </div>
+            <h4>Diagram Analysis for Visually Impaired Readers — HAL Preprint</h4>
           </div>
 
           <div class="pub-item">
-            <h4>Activity Diagrams Analysis for Visually Impaired Students</h4>
-            <div class="meta">Dolcy Sareen, Manpreet Kour, Mohamed Saber — 2026</div>
-            <p>Université Paris-Est Créteil Val de Marne.</p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://hal.science/hal-05569960" target="_blank" rel="noopener noreferrer">HAL</a>
-            </div>
+            <h4>Activity Diagrams Analysis for Visually Impaired Students — HAL 2026</h4>
           </div>
 
           <div class="pub-item">
-            <h4>Line Graph Interpretation Tool for Visually Impaired Users</h4>
-            <div class="meta">Ajitesh Parihar, Manpreet Kour, Mohamed Saber — 2026</div>
-            <p>Working paper / preprint.</p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://hal.science/hal-05483297" target="_blank" rel="noopener noreferrer">HAL</a>
-            </div>
+            <h4>Line Graph Interpretation Tool for Visually Impaired Users — HAL 2026</h4>
           </div>
         </section>
 
         <section class="card" id="seminars">
           <div class="section-head">
+            <div class="section-icon">👥</div>
             <h3>Seminars, Presentations & Project Visibility</h3>
             <div class="section-line"></div>
           </div>
 
           <div class="pub-item">
-            <h4>Améliorer la compréhension des diagrammes pour les personnes aveugles ou malvoyantes</h4>
-            <div class="meta">Manpreet Kour, Gaétan Hains, Mohamed Saber, Karine Gros — Présentation à la conférence IFRATH-JCJC2025, Paris, May 2025</div>
-            <p>Proceedings reference: page 35.</p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://ifrath.fr/jcjc2025/wp-content/uploads/sites/15/2025/09/actes_jcjc2025.pdf" target="_blank" rel="noopener noreferrer">Proceedings PDF</a>
+            <div class="pub-item-flex">
+              <div>
+                <h4>Améliorer la compréhension des diagrammes pour les personnes aveugles ou malvoyantes — IFRATH-JCJC2025</h4>
+              </div>
+              <a class="ext-link" href="https://ifrath.fr/jcjc2025/wp-content/uploads/sites/15/2025/09/actes_jcjc2025.pdf" target="_blank" rel="noopener noreferrer">↗</a>
             </div>
           </div>
 
           <div class="pub-item">
-            <h4>Enhancing Diagram Comprehension for the Blind or Visually Impaired: A Multimodal Approach</h4>
-            <div class="meta">Author presentation — JCJC2025, June 10, 2025</div>
-          </div>
-
-          <div class="pub-item">
-            <h4>INOVISUP – BAR & PIE CHARTS</h4>
-            <div class="meta">ERGANEO sheet / technology visibility</div>
-            <div class="pub-links">
-              <a class="pub-link" href="https://www.erganeo.com/fr/793" target="_blank" rel="noopener noreferrer">ERGANEO</a>
+            <div class="pub-item-flex">
+              <div>
+                <h4>Enhancing Diagram Comprehension for the Blind or Visually Impaired: A Multimodal Approach — JCJC2025</h4>
+              </div>
+              <span class="ext-link">↗</span>
             </div>
           </div>
 
           <div class="pub-item">
-            <h4>INOVISUP Project Communication</h4>
-            <div class="meta">Public LinkedIn project communication</div>
-            <div class="pub-links">
-              <a class="pub-link" href="https://www.linkedin.com/posts/upec%E2%80%94chaire-handicap-emploi-et-sant%C3%A9-au-travail_projet-inovisup-activity-7391057347177263104-NAYK" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <div class="pub-item-flex">
+              <div>
+                <h4>INOVISUP – BAR & PIE CHARTS — ERGANEO sheet / technology visibility</h4>
+              </div>
+              <a class="ext-link" href="https://www.erganeo.com/fr/793" target="_blank" rel="noopener noreferrer">↗</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-item-flex">
+              <div>
+                <h4>INOVISUP Project Communication — Public LinkedIn project communication</h4>
+              </div>
+              <a class="ext-link" href="https://www.linkedin.com/posts/upec%E2%80%94chaire-handicap-emploi-et-sant%C3%A9-au-travail_projet-inovisup-activity-7391057347177263104-NAYK" target="_blank" rel="noopener noreferrer">↗</a>
             </div>
           </div>
         </section>
 
         <section class="card" id="achievements">
           <div class="section-head">
+            <div class="section-icon">🏆</div>
             <h3>Achievements & Academic Service</h3>
             <div class="section-line"></div>
           </div>
