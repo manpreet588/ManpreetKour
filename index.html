@@ -1,216 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manpreet Kour | Ph.D. Candidate | AI for Accessibility</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manpreet Kour | PhD Candidate</title>
 
-  <style>
-    :root {
-      --bg: #f3f7fc;
-      --surface: #ffffff;
-      --primary: #143a5a;
-      --accent: #2f7dbd;
-      --text: #1f2937;
-      --muted: #5b6777;
-      --line: #dbe6f0;
-      --shadow: 0 15px 40px rgba(0,0,0,0.08);
-    }
+<style>
+:root {
+  --bg: #f3f7fc;
+  --card: #ffffff;
+  --primary: #143a5a;
+  --accent: #2f7dbd;
+  --text: #1f2937;
+  --muted: #5b6777;
+  --shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
 
-    * { margin:0; padding:0; box-sizing:border-box; }
+* {margin:0; padding:0; box-sizing:border-box;}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height:1.6;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
 
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px 0;
-    }
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 0;
+}
 
-    .hero {
-      background: linear-gradient(135deg,#2f7dbd,#143a5a);
-      color:#fff;
-      padding:40px;
-      border-radius:20px;
-      display:flex;
-      gap:30px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
+.hero {
+  background: linear-gradient(135deg,#2f7dbd,#143a5a);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    .hero img {
-      width:160px;
-      height:160px;
-      border-radius:50%;
-      object-fit:cover;
-      border:4px solid #fff;
-    }
+.hero img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
 
-    .hero h1 { font-size:32px; }
-    .hero h2 { font-weight:400; margin:5px 0 15px; }
+.hero h1 {font-size: 32px;}
+.hero h2 {font-weight: normal; margin: 8px 0;}
 
-    .contact {
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:10px;
-    }
+.contact {
+  margin-top: 10px;
+}
 
-    .contact a {
-      background: rgba(255,255,255,0.2);
-      padding:8px 12px;
-      border-radius:20px;
-      color:#fff;
-      font-size:14px;
-    }
+.contact a {
+  margin-right: 10px;
+  color: white;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
 
-    .section {
-      background:#fff;
-      padding:20px;
-      margin-top:20px;
-      border-radius:16px;
-      box-shadow: var(--shadow);
-    }
+.section {
+  background: var(--card);
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
 
-    h3 {
-      margin-bottom:10px;
-      color: var(--primary);
-    }
+h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
 
-    ul { padding-left:20px; }
+ul {
+  padding-left: 20px;
+}
 
-    .grid {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:15px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
 
-    .card {
-      background:#f8fbff;
-      padding:15px;
-      border-radius:12px;
-      border:1px solid var(--line);
-    }
+.card {
+  background: #f8fbff;
+  padding: 10px;
+  border-radius: 10px;
+}
 
-    a.button {
-      display:inline-block;
-      margin-top:10px;
-      padding:10px 15px;
-      background:#2f7dbd;
-      color:#fff;
-      border-radius:10px;
-      font-weight:bold;
-    }
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: var(--accent);
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
 
-    footer {
-      text-align:center;
-      margin:30px 0;
-      color: var(--muted);
-    }
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--muted);
+}
 
-    @media(max-width:768px){
-      .grid { grid-template-columns:1fr; }
-      .hero { flex-direction:column; text-align:center; }
-    }
-  </style>
+@media(max-width:768px){
+  .grid {grid-template-columns:1fr;}
+  .hero {flex-direction:column; text-align:center;}
+}
+</style>
+
 </head>
-
 <body>
 
 <div class="container">
 
-  <!-- HERO -->
-  <div class="hero">
-    <img src="mypicture.jpeg" alt="Profile Photo">
-    <div>
-      <h1>Manpreet Kour</h1>
-      <h2>Ph.D. Candidate | AI for Accessibility | INOVISUP Project</h2>
+<!-- HERO -->
+<div class="hero">
+  <img src="mypicture.jpeg" alt="profile">
 
-      <p>
-        My research focuses on making diagrams, charts, and visual content accessible to visually impaired users using AI, deep learning, and multimodal systems.
-      </p>
+  <div>
+    <h1>Manpreet Kour</h1>
+    <h2>PhD Candidate | AI for Accessibility | INOVISUP Project</h2>
 
-      <div class="contact">
-        <a href="mailto:manpreet.kour@u-pec.fr">Email</a>
-        <a href="https://www.linkedin.com/in/manpreet121" target="_blank">LinkedIn</a>
-        <a href="https://github.com/manpreet588" target="_blank">GitHub</a>
-      </div>
+    <p>
+      Research focused on diagram accessibility for visually impaired users using AI, deep learning and computer vision.
+    </p>
 
-      <a class="button" href="Manpreet_Kour_OnePage_Designed_CV.pdf" target="_blank">Download CV</a>
+    <div class="contact">
+      <a href="mailto:manpreet.kour@u-pec.fr">Email</a>
+      <a href="https://www.linkedin.com/in/manpreet121" target="_blank">LinkedIn</a>
+      <a href="https://github.com/manpreet588" target="_blank">GitHub</a>
     </div>
-  </div>
 
-  <!-- ABOUT -->
-  <div class="section">
-    <h3>About</h3>
-    <p>
-      Ph.D. candidate at Université Paris-Est Créteil working on diagram analysis for visually impaired readers.
-    </p>
-  </div>
-
-  <!-- PROJECT -->
-  <div class="section">
-    <h3>Research Project</h3>
-    <p>
-      My Ph.D. is part of the <strong>INOVISUP project</strong>, focused on non-visual diagram understanding.
-    </p>
-
-    <!-- ✅ WORKING LINK -->
-    <a class="button" href="https://inovisup.lacl.fr/" target="_blank" rel="noopener noreferrer">
-      🔗 Visit INOVISUP Project
+    <a class="button" href="Manpreet_Kour_OnePage_Designed_CV.pdf" target="_blank">
+      Download CV
     </a>
   </div>
+</div>
 
-  <!-- EDUCATION -->
-  <div class="section">
-    <h3>Education</h3>
-    <ul>
-      <li>Ph.D. Informatics – UPEC (2024–Present)</li>
-      <li>MSc Biometrics & Vision – UPEC (2022–2024)</li>
-      <li>B.Tech Computer Science – India</li>
-    </ul>
+<!-- ABOUT -->
+<div class="section">
+  <h3>About</h3>
+  <p>
+    PhD researcher at Université Paris-Est Créteil working on making diagrams accessible to visually impaired students.
+  </p>
+</div>
+
+<!-- INOVISUP PROJECT -->
+<div class="section">
+  <h3>Research Project</h3>
+
+  <p>
+    My PhD is part of the <strong>INOVISUP project</strong>, focusing on non-visual understanding of diagrams and accessibility.
+  </p>
+
+  <!-- ✅ CLICKABLE LINK -->
+  <a class="button" href="https://inovisup.lacl.fr/" target="_blank" rel="noopener noreferrer">
+    🔗 Open INOVISUP Website
+  </a>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+  <h3>Education</h3>
+  <ul>
+    <li>PhD Informatics – UPEC (2024–Present)</li>
+    <li>MSc Biometrics & Vision – UPEC</li>
+    <li>B.Tech Computer Science – India</li>
+  </ul>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+  <h3>Experience</h3>
+  <ul>
+    <li>LIRIS Lab – Deep Learning Research</li>
+    <li>Software Developer – Toxsl Technologies</li>
+  </ul>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+  <h3>Projects</h3>
+  <div class="grid">
+    <div class="card">AR Game</div>
+    <div class="card">MRI GAN</div>
+    <div class="card">Face Recognition</div>
+    <div class="card">COVID Visualization</div>
   </div>
+</div>
 
-  <!-- EXPERIENCE -->
-  <div class="section">
-    <h3>Experience</h3>
-    <ul>
-      <li>LIRIS Lab – Deep Learning Research</li>
-      <li>Software Developer – Toxsl Technologies</li>
-    </ul>
-  </div>
+<!-- PUBLICATIONS -->
+<div class="section">
+  <h3>Publications</h3>
+  <ul>
+    <li>IEEE ComComAp 2025</li>
+    <li>ICIIP 2025</li>
+    <li>HAL & TechRxiv Preprints</li>
+  </ul>
+</div>
 
-  <!-- PROJECTS -->
-  <div class="section">
-    <h3>Projects</h3>
-    <div class="grid">
-      <div class="card">AR Game</div>
-      <div class="card">MRI GAN</div>
-      <div class="card">Face Recognition</div>
-      <div class="card">COVID Visualization</div>
-    </div>
-  </div>
-
-  <!-- PUBLICATIONS -->
-  <div class="section">
-    <h3>Publications</h3>
-    <ul>
-      <li>IEEE ComComAp 2025</li>
-      <li>ICIIP 2025</li>
-      <li>HAL & TechRxiv Preprints</li>
-    </ul>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Manpreet Kour
-  </footer>
+<footer>
+© 2026 Manpreet Kour
+</footer>
 
 </div>
 
